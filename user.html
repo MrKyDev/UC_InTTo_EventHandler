@@ -6,6 +6,7 @@
   <title>UC Intto - Event Registration</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/user.css">
+  <link rel="icon" type="image/x-icon" href="/img/Icon.png">
 </head>
 <body>
   <!--NavBar-->
@@ -13,7 +14,6 @@
     <div class="logo">UC Intto System</div>
     <div class="nav-links" id="navbarLinks">
       <!-- These are conditionally rendered -->
-      <a href="/admin-register.html" id="adminLink">Register as Admin</a>
       <a href="/admin-login.html" id="loginLink">Login</a>
       <span id="profileName" style="display:none;">Welcome, <strong id="userName">User</strong></span>
       <button id="logoutBtn" style="display:none;">Logout</button>
@@ -60,6 +60,10 @@
     </div>
   </div>
 
+  <!--FOOTER-->
+  <div class="footer">
+    <p>All rights Reserved © KyDev</p>
+  </div>
   <script>
     // Example QR generator using a placeholder QR
     const canvas = document.getElementById("qrCanvas");

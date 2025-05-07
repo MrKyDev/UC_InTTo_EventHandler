@@ -8,6 +8,7 @@
 body {
   background: url(/img/Hero.jfif);
   background-size: cover;
+  background-blend-mode: lighten;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -171,4 +172,16 @@ strong {
   .qr-section {
     max-width: 100%;
   }
+}
+
+
+/*Footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(3, 3, 3, 0.516);
+  color: white;
+  text-align: center;
 }
