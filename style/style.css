@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url('/img/Hero.png') no-repeat center center;
+  background: url('https://example.com/img/Hero.png') no-repeat center center;
   background-size: cover;
   background-blend-mode: lighten;
   min-height: 100vh;
