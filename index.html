@@ -14,14 +14,12 @@
     <img src="img/Icon.png" width="60vh">
     <div class="logo">UC InTTo System</div>
     <div class="nav-links" id="navbarLinks">
-      <!-- These are conditionally rendered -->
       <a href="admin-login.html" id="loginLink">Login</a>
       <span id="profileName" style="display:none;">Welcome, <strong id="userName">User</strong></span>
       <button id="logoutBtn" style="display:none;">Logout</button>
     </div>
   </nav>
   <!--End of NavBar-->
-
 
   <div class="main-container">
     <!-- Manual Registration -->
@@ -66,16 +64,14 @@
   <div class="footer">
     <p>All rights Reserved © KyDev</p>
   </div>
+
   <script>
-    // Example QR generator using a placeholder QR
     const canvas = document.getElementById("qrCanvas");
     const ctx = canvas.getContext("2d");
-
-    // Dummy QR representation (replace with real QR library if needed)
     canvas.width = 180;
     canvas.height = 180;
     ctx.fillStyle = "#000";
-    ctx.fillRect(40, 40, 100, 100); // placeholder box
+    ctx.fillRect(40, 40, 100, 100);
   </script>
 </body>
 </html>

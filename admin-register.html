@@ -1,34 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Register Admin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-  <h2>Register Admin</h2>
-  <form id="adminRegForm">
-    <input type="text" placeholder="Username" id="adminUsername" required>
-    <input type="password" placeholder="Password" id="adminPassword" required>
-    <button type="submit">Register</button>
-  </form>
-  <p><a href="admin-login.html">Already registered? Login</a></p>
-
-  <script>
-    document.getElementById('adminRegForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const username = adminUsername.value;
-      const password = adminPassword.value;
-      let admins = JSON.parse(localStorage.getItem('admins') || '[]');
-
-      if (admins.find(a => a.username === username)) {
-        alert('Username exists!');
-        return;
-      }
-
-      admins.push({ username, password });
-      localStorage.setItem('admins', JSON.stringify(admins));
-      alert('Admin registered!');
-      window.location.href = 'admin-login.html';
-    });
-  </script>
+  
 </body>
 </html>
