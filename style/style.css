@@ -60,6 +60,7 @@ body {
   padding: 20px 50px;
 }
 
+/*Manual Reg Glass*/
 .glass-box {
   background: rgba(3, 3, 3, 0.632);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
@@ -73,6 +74,7 @@ body {
   max-width: 480px;
 }
 
+/*QR Glass*/
 .glass-boxQR {
   background: rgba(3, 3, 3, 0.632);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
