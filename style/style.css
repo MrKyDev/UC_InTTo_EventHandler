@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url('https://raw.githubusercontent.com/MrKyDev/UC_InTTo_EventHandler/main/img/Hero.png?raw=true') no-repeat center center;
+  background: url('/img/Hero.png') no-repeat center center;
   background-size: cover;
   background-blend-mode: lighten;
   min-height: 100vh;
@@ -52,14 +52,16 @@ body {
 /* MAIN SECTION */
 .main-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 40px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 20px 50px;
 }
 
-.glass-box, .glass-boxQR {
+/*Manual Reg Glass*/
+.glass-box {
   background: rgba(3, 3, 3, 0.632);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(12px);
@@ -70,15 +72,32 @@ body {
   padding: 30px;
   width: 100%;
   max-width: 480px;
-  box-sizing: border-box;
-  margin: 0 auto;
 }
 
+/*QR Glass*/
+.glass-boxQR {
+  background: rgba(3, 3, 3, 0.632);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 600px) {
   .glass-boxQR {
     padding: 20px;
   }
 }
+
 
 h2 {
   text-align: center;
@@ -181,7 +200,8 @@ strong {
   }
 }
 
-/* Footer */
+
+/*Footer*/
 .footer {
   position: fixed;
   left: 0;
