@@ -14,7 +14,7 @@
     <div class="nav-links" id="navbarLinks">
       <!-- These are conditionally rendered -->
       <a href="/admin-register.html" id="adminLink">Register as Admin</a>
-      <a href="/login.html" id="loginLink">Login</a>
+      <a href="/admin-login.html" id="loginLink">Login</a>
       <span id="profileName" style="display:none;">Welcome, <strong id="userName">User</strong></span>
       <button id="logoutBtn" style="display:none;">Logout</button>
     </div>
@@ -34,15 +34,15 @@
         <input type="email" placeholder="Email" name="email" required>
         <input type="tel" placeholder="Contact Number" name="contact" required>
 
-        <fieldset>
-          <legend>Select Role</legend>
-          <label><input type="radio" name="role" value="Student" required> Student</label>
-          <label><input type="radio" name="role" value="Teacher/Professor"> Teacher/Professor</label>
-          <label><input type="radio" name="role" value="VIP"> VIP</label>
-          <label><input type="radio" name="role" value="Stakeholder"> Stakeholder</label>
-          <label><input type="radio" name="role" value="Event Organizer"> Event Organizer</label>
-        </fieldset>
-
+        <label for="role">Select Role:</label>
+        <select name="role" id="role" required>
+          <option value="" disabled selected>Select your role</option>
+          <option value="Student">Student</option>
+          <option value="Teacher/Professor">Teacher/Professor</option>
+          <option value="VIP">VIP</option>
+          <option value="Stakeholder">Stakeholder</option>
+          <option value="Event Organizer">Event Organizer</option>
+        </select>
         <label>ID Verification Upload:
           <input type="file" name="idUpload" id="idUpload" required>
         </label>
