@@ -11,7 +11,8 @@
 <body>
   <!--NavBar-->
   <nav class="navbar">
-    <div class="logo">UC Intto System</div>
+    <img src="/img/Icon.png" width="60vh">
+    <div class="logo">UC InTTo System</div>
     <div class="nav-links" id="navbarLinks">
       <!-- These are conditionally rendered -->
       <a href="/admin-login.html" id="loginLink">Login</a>
@@ -19,7 +20,7 @@
       <button id="logoutBtn" style="display:none;">Logout</button>
     </div>
   </nav>
-  <!---->
+  <!--End of NavBar-->
 
 
   <div class="main-container">
@@ -53,11 +54,13 @@
     </div>
 
     <!-- QR Code Registration -->
+     <div class="glass-boxQR">
     <div class="qr-section">
       <h3>Or Register using this QR Code</h3>
       <canvas id="qrCanvas"></canvas>
       <p>Scan to auto-tag as <strong>QR registration</strong></p>
     </div>
+  </div>
   </div>
 
   <!--FOOTER-->

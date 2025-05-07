@@ -30,4 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
       this.reset();
     });
   });
+
+ /*Footer JS*/
+  window.addEventListener('scroll', function () {
+    const footer = document.getElementById('page-footer');
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.body.offsetHeight;
+
+    if (scrollTop + windowHeight >= documentHeight) {
+      footer.style.display = 'block';
+    } else {
+      footer.style.display = 'none';
+    }
+  });
+
   
