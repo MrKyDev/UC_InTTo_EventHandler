@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url('/img/Hero.jfif');
+  background: url('https://github.com/MrKyDev/UC_InTTo_EventHandler/blob/main/img/Hero.jfif?raw=true');
   background-size: cover;
   background-blend-mode: lighten;
   min-height: 100vh;
