@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UC Intto - Event Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/user.css">
+</head>
+<body>
+  <!--NavBar-->
+  <nav class="navbar">
+    <div class="logo">UC Intto System</div>
+    <div class="nav-links" id="navbarLinks">
+      <!-- These are conditionally rendered -->
+      <a href="/admin-register.html" id="adminLink">Register as Admin</a>
+      <a href="/login.html" id="loginLink">Login</a>
+      <span id="profileName" style="display:none;">Welcome, <strong id="userName">User</strong></span>
+      <button id="logoutBtn" style="display:none;">Logout</button>
+    </div>
+  </nav>
+  <!---->
+
+
+  <div class="main-container">
+    <!-- Manual Registration -->
+    <div class="glass-box">
+      <h2>REGISTRATION</h2>
+      <form class="registration-form" id="registrationForm" enctype="multipart/form-data">
+        <input type="text" placeholder="First Name" name="firstName" required>
+        <input type="text" placeholder="Last Name" name="lastName" required>
+        <input type="number" placeholder="Age" name="age" required>
+        <input type="text" placeholder="Address" name="address" required>
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="tel" placeholder="Contact Number" name="contact" required>
+
+        <fieldset>
+          <legend>Select Role</legend>
+          <label><input type="radio" name="role" value="Student" required> Student</label>
+          <label><input type="radio" name="role" value="Teacher/Professor"> Teacher/Professor</label>
+          <label><input type="radio" name="role" value="VIP"> VIP</label>
+          <label><input type="radio" name="role" value="Stakeholder"> Stakeholder</label>
+          <label><input type="radio" name="role" value="Event Organizer"> Event Organizer</label>
+        </fieldset>
+
+        <label>ID Verification Upload:
+          <input type="file" name="idUpload" id="idUpload" required>
+        </label>
+
+        <input type="hidden" id="via" name="via">
+        <button type="submit">Submit Registration</button>
+      </form>
+    </div>
+
+    <!-- QR Code Registration -->
+    <div class="qr-section">
+      <h3>Or Register using this QR Code</h3>
+      <canvas id="qrCanvas"></canvas>
+      <p>Scan to auto-tag as <strong>QR registration</strong></p>
+    </div>
+  </div>
+
+  <script>
+    // Example QR generator using a placeholder QR
+    const canvas = document.getElementById("qrCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Dummy QR representation (replace with real QR library if needed)
+    canvas.width = 180;
+    canvas.height = 180;
+    ctx.fillStyle = "#000";
+    ctx.fillRect(40, 40, 100, 100); // placeholder box
+  </script>
+</body>
+</html>

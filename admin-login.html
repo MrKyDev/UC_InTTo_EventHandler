@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+</head>
+<body>
+  <h2>Admin Login</h2>
+  <form id="adminLoginForm">
+    <input type="text" id="loginUsername" placeholder="Username" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+  <p><a href="admin-register.html">Register New Admin</a></p>
+
+  <script>
+    document.getElementById('adminLoginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = loginUsername.value;
+      const password = loginPassword.value;
+      let admins = JSON.parse(localStorage.getItem('admins') || '[]');
+
+      const match = admins.find(a => a.username === username && a.password === password);
+      if (match) {
+        sessionStorage.setItem('loggedInAdmin', username);
+        window.location.href = 'admin.html';
+      } else {
+        alert('Invalid credentials');
+      }
+    });
+  </script>
+</body>
+</html>

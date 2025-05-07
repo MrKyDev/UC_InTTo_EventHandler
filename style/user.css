@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: url(/img/Hero.jfif);
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-links a, .nav-links button {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links button:hover, .nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* MAIN SECTION */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.glass-box {
+  background: rgba(3, 3, 3, 0.632);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 480px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+form input,
+form select,
+form button,
+form fieldset,
+form label {
+  width: 100%;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+form input,
+form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 12px;
+}
+
+fieldset legend {
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+fieldset label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.qr-section {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+}
+
+.qr-section h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.qr-section canvas {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+.qr-section p {
+  color: #444;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: bold;
+  color: #111;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .glass-box,
+  .qr-section {
+    max-width: 100%;
+  }
+}
