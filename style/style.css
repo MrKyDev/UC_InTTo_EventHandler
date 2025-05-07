@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url(/img/Hero.jfif);
+  background: url(./img/Hero.jfif);
   background-size: cover;
   background-blend-mode: lighten;
   min-height: 100vh;
