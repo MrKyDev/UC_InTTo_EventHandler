@@ -9,7 +9,7 @@
   <link rel="icon" type="image/x-icon" href="img/Icon.png">
 </head>
 <body>
-  <!--NavBar-->
+  <!-- NavBar -->
   <nav class="navbar">
     <img src="img/Icon.png" width="60vh">
     <div class="logo">UC InTTo System</div>
@@ -19,8 +19,8 @@
       <button id="logoutBtn" style="display:none;">Logout</button>
     </div>
   </nav>
-  <!--End of NavBar-->
 
+  <!-- Main Content -->
   <div class="main-container">
     <!-- Manual Registration -->
     <div class="glass-box">
@@ -42,6 +42,7 @@
           <option value="Stakeholder">Stakeholder</option>
           <option value="Event Organizer">Event Organizer</option>
         </select>
+
         <label>ID Verification Upload:
           <input type="file" name="idUpload" id="idUpload" required>
         </label>
@@ -51,27 +52,43 @@
       </form>
     </div>
 
-    <!-- QR Code Registration -->
-    <div class="glass-boxQR">
-      <div class="qr-section">
-        <h3>Or Register using this QR Code</h3>
-        <img src="img/QR Code.png" alt="QR Code" class="qr-img" />
-        <p>Scan to auto-tag as <strong>QR registration</strong></p>
+    <!-- Right side: Digital Clock + QR -->
+    <div>
+      <!-- Digital Clock Above QR -->
+      <div class="glass-containerCl">
+        <p id="clock">--:--:--</p>
+      </div>
+
+      <!-- QR Code Registration -->
+      <div class="glass-boxQR">
+        <div class="qr-section">
+          <h3>Or Register using this QR Code</h3>
+          <img src="img/QR Code.png" alt="QR Code" class="qr-img" />
+          <p>Scan to auto-tag as <strong>QR registration</strong></p>
+        </div>
       </div>
     </div>
+  </div>
 
-  <!--FOOTER-->
+  <!-- Footer -->
   <div class="footer">
     <p>All rights Reserved © KyDev</p>
   </div>
 
+  <!-- Digital Clock Script -->
   <script>
-    const canvas = document.getElementById("qrCanvas");
-    const ctx = canvas.getContext("2d");
-    canvas.width = 180;
-    canvas.height = 180;
-    ctx.fillStyle = "#000";
-    ctx.fillRect(40, 40, 100, 100);
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // initialize immediately
   </script>
+
+  <script src="/script/user.js"></script>
 </body>
 </html>
