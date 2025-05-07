@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /*Digital Clock */
   function displayTime(){
     var d = new Date();
-    var hour = d.getHours(); // 0-23
-    var min = d.getMinutes(); // 0-59
-    var sec = d.getSeconds(); // 0-59
+    var hour = d.getHours(); 
+    var min = d.getMinutes(); 
+    var sec = d.getSeconds(); 
     var amOrPm = "AM";
     if(hour >= 12)
     {
@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("clock").innerHTML = hour + ":" + min + ":" + sec + " " + amOrPm;
   }
   setInterval(displayTime, 1000);
+  
  /*Footer JS*/
   window.addEventListener('scroll', function () {
     const footer = document.getElementById('page-footer');
