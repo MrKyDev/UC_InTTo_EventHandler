@@ -6,16 +6,16 @@
   <title>UC Intto - Event Registration</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/style.css">
-  <link rel="icon" type="image/x-icon" href="/img/Icon.png">
+  <link rel="icon" type="image/x-icon" href="img/Icon.png">
 </head>
 <body>
   <!--NavBar-->
   <nav class="navbar">
-    <img src="/img/Icon.png" width="60vh">
+    <img src="img/Icon.png" width="60vh">
     <div class="logo">UC InTTo System</div>
     <div class="nav-links" id="navbarLinks">
       <!-- These are conditionally rendered -->
-      <a href="/admin-login.html" id="loginLink">Login</a>
+      <a href="admin-login.html" id="loginLink">Login</a>
       <span id="profileName" style="display:none;">Welcome, <strong id="userName">User</strong></span>
       <button id="logoutBtn" style="display:none;">Logout</button>
     </div>
@@ -54,14 +54,13 @@
     </div>
 
     <!-- QR Code Registration -->
-     <div class="glass-boxQR">
-    <div class="qr-section">
-      <h3>Or Register using this QR Code</h3>
-      <canvas id="qrCanvas"></canvas>
-      <p>Scan to auto-tag as <strong>QR registration</strong></p>
+    <div class="glass-boxQR">
+      <div class="qr-section">
+        <h3>Or Register using this QR Code</h3>
+        <canvas id="qrCanvas"></canvas>
+        <p>Scan to auto-tag as <strong>QR registration</strong></p>
+      </div>
     </div>
-  </div>
-  </div>
 
   <!--FOOTER-->
   <div class="footer">
