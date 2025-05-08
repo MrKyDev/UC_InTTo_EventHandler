@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('via').value = 'System';
     }
   
+    
     document.getElementById('registrationForm').addEventListener('submit', function (e) {
       e.preventDefault();
   
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         role: formData.get('role'),
         via: formData.get('via'),
         idFileName: formData.get('idUpload').name
+        
       };
   
       let records = JSON.parse(localStorage.getItem('registrations') || '[]');
